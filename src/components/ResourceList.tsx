@@ -34,8 +34,8 @@ export const ResourceList = <T extends { name?: string; title?: string }>({
 }: ResourceListProps<T>) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const pageKey = `${resourceName}-page`;
-  const searchKey = `${resourceName}-search`;
+  const pageKey = "page";
+  const searchKey = "search";
 
   const currentPage = parseInt(searchParams.get(pageKey) || "1");
   const currentSearch = searchParams.get(searchKey) || "";

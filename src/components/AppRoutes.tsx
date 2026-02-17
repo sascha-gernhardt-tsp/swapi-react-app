@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { Persons } from "../pages/Persons";
 import { Films } from "../pages/Films";
 import { Planets } from "../pages/Planets";
@@ -15,7 +15,8 @@ import { SpeciesDetail } from "../pages/SpeciesDetail";
 export const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Persons />} />
+      <Route path="/" element={<Navigate to="/people" replace />} />
+      <Route path="/people" element={<Persons />} />
       <Route path="/people/:id" element={<PersonDetail />} />
       <Route path="/films" element={<Films />} />
       <Route path="/films/:id" element={<FilmDetail />} />
