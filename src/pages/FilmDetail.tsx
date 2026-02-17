@@ -37,9 +37,9 @@ export const FilmDetail = () => {
         ]}
       />
       <div className="prose dark:prose-invert max-w-none mb-12">
-        <h3 className="text-lg font-semibold text-zinc-900 dark:text-white mb-4">
+        <h2 className="text-lg font-semibold text-zinc-900 dark:text-white mb-4">
           Opening Crawl
-        </h3>
+        </h2>
         <blockquote className="border-l-4 border-indigo-500 pl-4 italic text-zinc-700 dark:text-zinc-300 bg-zinc-50 dark:bg-zinc-900/50 p-4 rounded-r-lg">
           {film.opening_crawl}
         </blockquote>

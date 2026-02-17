@@ -20,11 +20,11 @@ export const DetailHeader = ({
   return (
     <header className="flex flex-col md:flex-row gap-8 items-start mb-8 border-b border-zinc-100 dark:border-zinc-800 pb-8">
       <div className="flex-grow w-full">
-        <h2
+        <h1
           className={`text-3xl font-bold tracking-tight text-zinc-900 dark:text-white ${subtitle ? "mb-2" : "mb-6"}`}
         >
           {title}
-        </h2>
+        </h1>
         {subtitle && (
           <p className="text-zinc-500 dark:text-zinc-400 mb-6">{subtitle}</p>
         )}

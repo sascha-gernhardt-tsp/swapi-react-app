@@ -19,9 +19,9 @@ export const Starships = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity dark:from-sky-500/10 dark:to-indigo-500/10 pointer-events-none" />
 
               <div className="relative z-10">
-                <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-indigo-600 dark:group-hover:text-sky-400 transition-colors mb-4 truncate">
+                <h1 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-indigo-600 dark:group-hover:text-sky-400 transition-colors mb-4 truncate">
                   {ship.name}
-                </h2>
+                </h1>
 
                 <div className="grid gap-y-2 gap-x-4 text-sm">
                   <div className="col-span-2">
