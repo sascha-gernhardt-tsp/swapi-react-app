@@ -4,6 +4,8 @@ A React app featuring [SWAPI](https://swapi.dev/) API, to browse or search for S
 
 ![Weeeee](src/assets/weeeee.gif)
 
+Watch the demo: https://swapi-react-app-theta.vercel.app/
+
 ## Some of the features
 
 - **Search:** Real-time search functionality with debounce (200ms) to optimize API calls.
