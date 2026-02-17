@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { useFetch } from "../hooks/useFetch";
 import { useDebounce } from "../hooks/useDebounce";
 import type { SwapiResponse } from "../types/swapi";
+import { Pagination } from "./Pagination";
 
 interface ResourceListProps<T> {
   resourceName: string;
@@ -142,31 +143,13 @@ export const ResourceList = <T extends { name?: string; title?: string }>({
                   ))}
                 </ul>
               )}
-
-              <nav className="flex items-center justify-between border-t border-zinc-200 dark:border-zinc-800 pt-6 mt-8">
-                <button
-                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-zinc-600 bg-white border border-zinc-300 rounded-lg hover:bg-zinc-50 hover:text-zinc-900 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-sm dark:bg-zinc-900 dark:border-zinc-700 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-white"
-                  disabled={!data.previous}
-                  onClick={() => handlePageChange(currentPage - 1)}
-                >
-                  ← Previous
-                </button>
-
-                <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                  Page{" "}
-                  <span className="text-zinc-900 dark:text-white">
-                    {currentPage}
-                  </span>
-                </span>
-
-                <button
-                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-zinc-600 bg-white border border-zinc-300 rounded-lg hover:bg-zinc-50 hover:text-zinc-900 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-sm dark:bg-zinc-900 dark:border-zinc-700 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-white"
-                  disabled={!data.next}
-                  onClick={() => handlePageChange(currentPage + 1)}
-                >
-                  Next →
-                </button>
-              </nav>
+              <Pagination
+                currentPage={currentPage}
+                hasPrevious={Boolean(data.previous)}
+                hasNext={Boolean(data.next)}
+                onPrevious={() => handlePageChange(currentPage - 1)}
+                onNext={() => handlePageChange(currentPage + 1)}
+              />
             </>
           )
         )}
