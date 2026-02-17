@@ -69,6 +69,10 @@ Run the test suite:
 pnpm test
 ```
 
+You can also open the browser console to see what accessibility issues the axe-core library finds:
+
+![](src/assets/browser-console.png)
+
 ## Future Improvements
 
 Due to time constraints, the focus was on core functionality first.
