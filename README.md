@@ -29,14 +29,14 @@ A React app featuring [SWAPI](https://swapi.dev/) API, to browse or search for S
 
 ### Installation
 
-1. Clone the repository:
+1. Clone the repository
+
+2. Install dependencies:
 
    ```bash
-   git clone <repository-url>
    cd swapi-react-app
    ```
 
-2. Install dependencies:
    ```bash
    pnpm install
    ```
