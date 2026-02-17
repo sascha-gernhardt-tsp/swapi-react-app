@@ -78,6 +78,7 @@ Due to time constraints, the focus was on core functionality first.
 - Optimize data fetching.
 - Accessibility and WCAG improvements.
 - Add some images from another API, like [starwars-api](https://akabab.github.io/starwars-api/)
+- Further component and logic simplifying.
 
 ## License & Credits
 
